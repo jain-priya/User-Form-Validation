@@ -1,5 +1,5 @@
 var dbConfig = {
-    dbURL: "mongodb://<dbuser>:<dbpassword>@ds255308.mlab.com:55308/userform"
+    dbURL: "mongodb://admin:admin@ds255308.mlab.com:55308/userform"
 }
 
 module.exports = dbConfig;
