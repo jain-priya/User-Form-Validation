@@ -1,0 +1,96 @@
+<!--Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html lang="zxx">
+
+<head>
+    <title>User Form</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- css files -->
+    <title>User Form</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+    <script src="../angularJS/app.js"></script>
+    <script src="../angularJS/factory.js"></script>
+    <script src="../angularJS/controller.js"></script>
+    <link rel="stylesheet" href="../assets/css/style.css" type="text/css" media="all" />
+    <!-- Style-CSS -->
+    <link rel="stylesheet" href="../assets/css/font-awesome.css">
+    <!-- Font-Awesome-Icons-CSS -->
+    <!-- //css files -->
+    <!-- online-fonts -->
+    <link href="//fonts.googleapis.com/css?family=Tangerine:400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <!-- //online-fonts -->
+</head>
+
+<body ng-app="myForm">
+    <!--header-->
+    <div ng-controller="myctrl">
+        <div class="header-w3l">
+            <h1>
+                <span>U</span>Ser
+                <span>F</span>orm</h1>
+        </div>
+        <!--//header-->
+        <div class="main-content-agile">
+            <div class="sub-main-w3">
+                <img src="../assets/images/profile.png" alt="" />
+                <h2>User</h2>
+
+
+
+                <form name="regForm" ng-submit="formSubmit(regForm.$valid)">
+                    <div class="pom-agile">
+
+                        <input placeholder="Name" class="user" type="text" required="" ng-model="userForm.name" name="name">
+                        <span style="color:red" ng-show="regForm.name.$dirty && regForm.name.$invalid">
+  <span ng-show="regForm.name.$error.required||regForm.name">Username is required.</span>
+                        </span>
+                    </div>
+                    <div class="pom-agile">
+
+                        <input placeholder="Age" ng-model="userForm.age" class="user" type="date" required name="age">
+                    </div>
+
+                    <div class="pom-agile">
+
+                        <input placeholder="Phone No." ng-model="userForm.phone" class="user" type="Number" required="" ng-minlength="10" name="phone">
+
+                    </div>
+                    <div class="pom-agile">
+
+                        <input placeholder="E-Mail" ng-model="userForm.email" class="user" type="email" required name="email">
+                        <span style="color:red" ng-show="regForm.email.$dirty && regForm.email.$invalid">
+                <span ng-show="regForm.email.$error.required||regForm.email">Email is required.</span>
+                        <span ng-show="regForm.email.$error.email||regForm.email">Invalid email address.</span>
+                        </span>
+                    </div>
+
+                    <div class="sub-w3l">
+                        <div class="sub-agile">
+                            <input type="checkbox" id="brand1" value="">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="right-w3l">
+                        <input type="submit" value="Submit">
+                    </div>
+
+                </form>
+                <div ng-if="errorMessage" class="message">{{ errorMessage }}</div>
+            </div>
+        </div>
+        <!--//main-->
+        <!--footer-->
+        <div class="footer">
+        </div>
+    </div>
+    <!--//footer-->
+</body>
+
+</html>
